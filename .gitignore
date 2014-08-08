@@ -1,0 +1,5 @@
+composer.lock
+public/index.html
+public/packages.json
+public/include/*
+vendor/*

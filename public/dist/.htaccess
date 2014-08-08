@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Package Server"
+AuthUserFile /path/to/.htpasswd
+Require user composer

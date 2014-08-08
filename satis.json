@@ -1,0 +1,20 @@
+{
+    "name": "Mercede Packages",
+    "homepage": "http://packages.mercede.us/",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:philsown/Example-Required-Package.git"
+        }
+    ],
+    "require-all": true,
+    "archive": {
+        "directory": "dist",
+        "format": "tar",
+        "prefix-url": "http://packages.mercede.us"
+    },
+    "twig-template": "./templates/index.twig",
+    "config": {
+        "cache-files-ttl": 0
+    }
+}

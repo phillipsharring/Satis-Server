@@ -1,0 +1,11 @@
+body {
+	font-family: verdana, sans-serif;
+}
+div {
+	width: 300px;
+	margin: 0 auto;
+}
+h1 {
+	padding-top: 256px;
+	background: url(../img/package.png) top center no-repeat;
+}

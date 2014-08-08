@@ -1,0 +1,3 @@
+#!/bin/bash
+
+php ./vendor/composer/satis/bin/satis build ./satis.json ./public
