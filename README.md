@@ -43,7 +43,7 @@ $ htpasswd -c .htpasswd composer
 
 ### HTACCESS
 
-Copy the file `public/dist/htaccess.dist` file to `public/dist/.htaccess`. Then, edit the `.htaccess` file in `public/dist` to have the correct path to the `.htpasswd` file you created above.
+Copy the `htaccess.dist` file in `public/dist` to `public/dist/.htaccess`. Then, edit the `.htaccess` to have the correct path to the `.htpasswd` file you created above.
 
 ```bash
 $ cd public/dist
@@ -52,10 +52,12 @@ $ vi .htaccess
 # edit the path
 ```
 
+Edit the `AuthUserFile` path.
+
 ```
 AuthType Basic
 AuthName "Package Server"
-AuthUserFile /path/to/.htpasswd  # <-- edit this path
+AuthUserFile /path/to/.htpasswd
 Require valid-user
 ```
 
@@ -64,21 +66,21 @@ Require valid-user
 Edit the `satis.json` and customize the values. In particular, modify the `repositories` key to list the repositories you would like to host on your package server.
 
 ```json
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:your-company/your-private-repo.git"
-        }
-    ],
+"repositories": [
+    {
+        "type": "git",
+        "url": "git@github.com:your-company/your-private-repo.git"
+    }
+]
 ```
 
 ## Usage
 
-Make the `satis-rebuild` script in the bin folder executable, then run it.
+Make the `satis-rebuild.sh` script in the `bin` folder executable (if it's not), then run it.
 
 ```bash
-$ chmod +x bin/satis-rebuild
-$ bin/satis-rebuild
+$ chmod +x bin/satis-rebuild.sh
+$ bin/satis-rebuild.sh
 ```
 
 ## Troubleshooting
