@@ -28,13 +28,13 @@ Add something like this to your `composer.json` file.
         "philsown/Satis-Server": "dev-master"
     }
 }
-```	
+```
 
 ## Configuration
 
 ### HTPASSWD
 
-Create an `.htpasswd` file to protect your dist directory.
+Create an `.htpasswd` file somewhere to protect your dist directory.
 
 ```bash
 $ htpasswd -c .htpasswd composer
@@ -43,10 +43,11 @@ $ htpasswd -c .htpasswd composer
 
 ### HTACCESS
 
-Edit the `.htaccess` file in `public/dist` to have the correct path to the `.htpasswd` file you created above.
+Copy the file `public/dist/htaccess.dist` file to `public/dist/.htaccess`. Then, edit the `.htaccess` file in `public/dist` to have the correct path to the `.htpasswd` file you created above.
 
 ```bash
 $ cd public/dist
+$ cp htaccess.dist .htaccess
 $ vi .htaccess
 # edit the path
 ```
@@ -54,8 +55,7 @@ $ vi .htaccess
 ```
 AuthType Basic
 AuthName "Package Server"
-# edit here
-AuthUserFile /path/to/.htpasswd
+AuthUserFile /path/to/.htpasswd  # <-- edit this path
 Require valid-user
 ```
 
