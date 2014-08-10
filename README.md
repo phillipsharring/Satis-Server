@@ -51,6 +51,14 @@ $ vi .htaccess
 # edit the path
 ```
 
+```
+AuthType Basic
+AuthName "Package Server"
+# edit here
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+```
+
 ### Satis.json
 
 Edit the `satis.json` and customize the values. In particular, modify the `repositories` key to list the repositories you would like to host on your package server.
