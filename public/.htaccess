@@ -1,3 +1,8 @@
 Options -Indexes
 ErrorDocument 401 /401.html
 ErrorDocument 404 /404.html
+
+AuthType Basic
+AuthName "Package Server"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
