@@ -1,7 +1,7 @@
 {
-	"name": "philsown/Satis-Server",
-	"description": "A sample Satis Server setup.",
-	"homepage": "https://github.com/philsown/Satis-Server",
+    "name": "philsown/Satis-Server",
+    "description": "A sample Satis Server setup.",
+    "homepage": "https://github.com/philsown/Satis-Server",
     "license": "MIT",
     "authors": [
         {
@@ -10,9 +10,9 @@
             "homepage": "http://www.phillipharrington.com/"
         }
     ],
-	"require": {
-		"php": ">=5.3.2",
-		"composer/composer": "1.0.*@dev",
-		"composer/satis": "1.0.*@dev"
-	}
+    "require": {
+        "php": ">=5.3.2",
+        "composer/composer": "1.0.*@dev",
+        "composer/satis": "1.0.*@dev"
+    }
 }
